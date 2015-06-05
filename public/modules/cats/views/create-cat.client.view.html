@@ -1,0 +1,35 @@
+<section data-ng-controller="CatsController">
+    <div class="page-header">
+        <h1>New Cat</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="name">Name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
+                    </div>
+                    <label class="control-label" for="image">Image URL</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="image" id="image" class="form-control" placeholder="https://41.media.tumblr.com/743312411a36c86ef91ec60841011fb1/tumblr_npdkngSJKX1u582wfo1_1280.jpg">
+                    </div>
+                    <label class="control-label" for="color">Color</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="color" id="color" class="form-control" placeholder="Color" required>
+                    </div>
+                    <label class="control-label" for="birthday">Birthday</label>
+                    <div class="controls">
+                        <input type="date" data-ng-model="birthday" id="birthday" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
